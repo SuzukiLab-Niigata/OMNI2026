@@ -41,6 +41,16 @@ h1,h2,h3,h4{margin:0;line-height:1.25}
 .lang button+button{border-left:1px solid var(--teal)}
 .lang button[aria-pressed="true"]{background:var(--teal);color:#fff}
 .burger{display:none;background:none;border:1px solid var(--rule);border-radius:6px;padding:6px 10px;font:inherit;color:var(--teal);cursor:pointer;flex:none}
+/* header never overlaps: items keep their width, and app.js measures the bar —
+   .nosub hides the subtitle, .compact folds the menu into the ☰ button (any language, any width) */
+.runhead .brand,.runhead .menu{flex:none}
+.runhead.nosub .brand small{display:none}
+.runhead.compact .burger{display:block}
+.runhead.compact .lang{margin-left:auto}
+.runhead.compact .menu{display:none;position:absolute;top:56px;left:0;right:0;flex-direction:column;background:#fff;border-bottom:2px solid var(--gold);padding:8px 16px 14px;box-shadow:0 10px 20px rgba(0,0,0,.08);max-height:calc(100vh - 56px);overflow:auto}
+.runhead.compact .menu.open{display:flex}
+.runhead.compact .menu a{padding:11px 6px;border-bottom:1px solid var(--row);font-size:1rem}
+.runhead.compact .menu a.pdf{margin:10px 0 0;text-align:center}
 
 /* ---------- page (paper) ---------- */
 .page{max-width:var(--page);margin:28px auto;background:var(--paper);box-shadow:0 1px 3px rgba(0,0,0,.08),0 8px 30px rgba(0,0,0,.05);padding:44px 56px 36px}

@@ -45,6 +45,27 @@
     });
   }
 
+  /* Header fit: first drop the subtitle, then fold the menu into ☰ if the bar is still too wide */
+  var header = document.querySelector('.runhead');
+  function fitHeader() {
+    if (!header) return;
+    var bar = header.querySelector('.in');
+    var menu = document.getElementById('menu');
+    var wasOpen = menu && menu.classList.contains('open');
+    header.classList.remove('nosub', 'compact');
+    if (bar.scrollWidth > bar.clientWidth + 1) header.classList.add('nosub');
+    if (bar.scrollWidth > bar.clientWidth + 1) header.classList.add('compact');
+    if (menu && !header.classList.contains('compact') && getComputedStyle(document.querySelector('.burger')).display === 'none') menu.classList.remove('open');
+    else if (menu && wasOpen) menu.classList.add('open');
+  }
+  var fitQueued = false;
+  window.addEventListener('resize', function () {
+    if (fitQueued) return;
+    fitQueued = true;
+    requestAnimationFrame(function () { fitQueued = false; fitHeader(); });
+  });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHeader);
+
   function setLang(lang, save) {
     if (LANGS.indexOf(lang) < 0) lang = 'en';
     var dict = (window.I18N && window.I18N[lang]) || {};
@@ -60,6 +81,7 @@
     document.documentElement.lang = lang;
     document.dispatchEvent(new CustomEvent('omni:lang', { detail: lang }));
     applyNames(lang);
+    fitHeader();
     document.documentElement.lang = lang;
     var tkey = document.body.getAttribute('data-title');
     document.title = (lang !== 'en' && tkey && dict[tkey]) ? dict[tkey] : baseTitle;
