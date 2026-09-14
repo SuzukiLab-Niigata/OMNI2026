@@ -9,6 +9,7 @@
     "nav.sessions": "セッション", "nav.keynotes": "基調講演", "nav.tour": "テクニカルツアー", "nav.si": "特集号",
     "nav.org": "組織・メンバー", "nav.venue": "会場", "nav.pdf": "論文集 (PDF)", "nav.home": "ホーム",
 
+    "bm.date": "2026年9月29日–30日 | トルコ・イズミル",
     "cover.jsps": "JSPS 日本 – トルコ<br>二国間セミナー",
     "cover.book": "論文集 &amp; プログラム",
     "cover.themeL": "テーマ",
@@ -190,6 +191,7 @@
     "nav.sessions": "Oturumlar", "nav.keynotes": "Davetli Konuşmalar", "nav.tour": "Teknik Gezi", "nav.si": "Özel Sayı",
     "nav.org": "Kurullar", "nav.venue": "Mekân", "nav.pdf": "Bildiri Kitabı (PDF)", "nav.home": "Ana Sayfa",
 
+    "bm.date": "29 – 30 EYLÜL 2026 | İZMİR, TÜRKİYE",
     "cover.jsps": "JSPS&nbsp; JAPONYA – TÜRKİYE<br>İKİLİ&nbsp; SEMİNERİ",
     "cover.book": "BİLDİRİ &nbsp;&amp;&nbsp; PROGRAM &nbsp;KİTABI",
     "cover.themeL": "TEMA",

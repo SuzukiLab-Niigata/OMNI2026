@@ -76,6 +76,24 @@ h1,h2,h3,h4{margin:0;line-height:1.25}
 .stats b{display:block;color:var(--gold);font-size:1.8rem;line-height:1.1}
 .stats span{color:#fff;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
 
+/* scalable logo: emblem (SVG) + live text, sized to its own width */
+.brandmark{container-type:inline-size;max-width:620px;margin:10px auto 22px;color:#16295a;font-family:"Roboto Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;text-align:center;line-height:1}
+.bm-word{display:flex;align-items:center;justify-content:center;max-width:100%}
+.bm-o{width:20cqi;height:auto;flex:none;margin-right:1cqi}
+.bm-mni{font-weight:800;font-size:25.5cqi;letter-spacing:-.01em;line-height:.78}
+.bm-year{font-weight:400;font-size:12cqi;color:#b58a4e;margin-left:4.5cqi;letter-spacing:.01em}
+.bm-title{font-weight:700;font-size:clamp(14px,5.1cqi,30px);line-height:1.2;margin-top:5cqi;text-wrap:balance}
+.bm-date{display:flex;align-items:center;justify-content:center;gap:3.5cqi;font-weight:700;font-size:clamp(11px,3.6cqi,21px);margin-top:4.5cqi;letter-spacing:.01em}
+.bm-date::before,.bm-date::after{content:"";flex:0 1 16cqi;height:max(2px,.45cqi);background:#48577f;border-radius:2px}
+.bm-date span{white-space:nowrap;flex:none}
+html[lang="ja"] .bm-date{font-family:"Roboto Condensed","Noto Sans JP","Hiragino Sans",sans-serif}
+@container (max-width:420px){
+  .bm-title br{display:none}
+  .bm-title{font-size:clamp(13px,4.6cqi,20px)}
+  .bm-date{flex-wrap:nowrap;font-size:clamp(10.5px,3.4cqi,15px)}
+  .bm-date::before,.bm-date::after{flex-basis:8cqi}
+}
+
 /* proceedings download box */
 .pbox{display:grid;grid-template-columns:1fr 160px;gap:22px;align-items:center;border:1px solid var(--rule);border-left:6px solid var(--gold);background:var(--row-2);padding:18px 22px;margin-top:26px;text-align:left}
 .pbox h3{color:var(--teal);font-size:1.2rem}
