@@ -68,6 +68,23 @@
     });
   }
 
+  /* Logo SVGs: inline them so the embedded fonts render in every browser and stay sharp when zoomed.
+     The <img> inside each slot stays as the fallback if the fetch fails (e.g. opened from file://). */
+  [].forEach.call(document.querySelectorAll('[data-inline-svg]'), function (box) {
+    fetch(box.getAttribute('data-inline-svg')).then(function (r) {
+      if (!r.ok) throw new Error('svg');
+      return r.text();
+    }).then(function (markup) {
+      var img = box.querySelector('img'), alt = img ? img.alt : '';
+      box.innerHTML = markup;
+      var svg = box.querySelector('svg');
+      if (!svg) return;
+      svg.removeAttribute('width'); svg.removeAttribute('height');
+      svg.setAttribute('role', 'img');
+      if (alt) svg.setAttribute('aria-label', alt);
+    }).catch(function () {});
+  });
+
   /* 3D models: download only when the viewer taps the button (the file is large) */
   [].forEach.call(document.querySelectorAll('model-viewer[data-src]'), function (mv) {
     var btn = mv.querySelector('.mv-load'), bar = mv.querySelector('.mv-progress span');

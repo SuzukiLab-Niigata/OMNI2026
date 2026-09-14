@@ -123,6 +123,7 @@
     "tour.r3i": "取水施設", "tour.r3c": "取水構造物と運用",
     "tour.r4i": "帰着", "tour.r4c": "イズミルへ帰着 · セミナー終了",
     "tour.note": "歩きやすい靴を着用し、常に現地スタッフの指示に従ってください。撮影制限がある場合は現地でお知らせします。",
+    "tour.mapT": "所在地 — Tahtalı ダム",
     "tour.galT": "現地ギャラリー — Tahtalı ダム",
     "tour.g1": "下流側から見たダム堤体", "tour.g2": "取水施設", "tour.g3": "ゲートと管理橋",
     "tour.g4": "貯水池と上流側斜面", "tour.g5": "取水施設下流の導水管",
@@ -307,6 +308,7 @@
     "tour.r3i": "Su alma yapısı", "tour.r3c": "Su alma yapısı ve işletimi",
     "tour.r4i": "Dönüş", "tour.r4c": "İzmir'e dönüş · seminerin sonu",
     "tour.note": "Katılımcıların uygun ayakkabı giymeleri ve her zaman saha personelinin talimatlarına uymaları rica olunur. Fotoğraf çekimi kısıtlamaları varsa sahada duyurulacaktır.",
+    "tour.mapT": "Konum — Tahtalı Barajı",
     "tour.galT": "Saha Galerisi — Tahtalı Barajı",
     "tour.g1": "Mansap tarafından görünen baraj gövdesi", "tour.g2": "Su alma yapısı", "tour.g3": "Kapak ve erişim yapısı",
     "tour.g4": "Rezervuar ve memba şevi", "tour.g5": "Su alma yapısının mansabındaki iletim boru hattı",
@@ -376,7 +378,7 @@
     "th.content2": "th.content", "it.opening2": "it.opening", "c.kA2": "c.kA", "c.kB2": "c.kB",
     "it.photo2": "it.photo", "it.lunch2": "it.lunch", "it.banquet2": "it.banquet", "it.dep2": "it.dep",
     "c.dep2": "c.dep", "it.tour2": "it.tour", "s.note15b": "s.note15", "kn.lec2": "kn.lec",
-    "kn.abs2": "kn.abs", "kn.about2": "kn.about"
+    "kn.abs2": "kn.abs", "kn.about2": "kn.about", "v.map2": "v.map", "v.map3": "v.map"
   };
   [ja, tr].forEach(function (d) { for (var k in alias) d[k] = d[alias[k]]; });
 
