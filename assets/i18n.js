@@ -10,6 +10,8 @@
     "nav.org": "組織・メンバー", "nav.venue": "会場", "nav.pdf": "論文集 (PDF)", "nav.home": "ホーム",
 
     "bm.date": "2026年9月29日–30日 | トルコ・イズミル",
+    "spot.bridge": "ボスポラス橋 — ヨーロッパとアジアを繋ぐ",
+    "spot.fuji": "富士山 — 日本の象徴。活火山であり豊かな湧水の源として、本セミナーのテーマ「災害」と「水インフラ」を象徴します",
     "cover.jsps": "JSPS 日本 – トルコ<br>二国間セミナー",
     "cover.book": "論文集 &amp; プログラム",
     "cover.themeL": "テーマ",
@@ -195,6 +197,8 @@
     "nav.org": "Kurullar", "nav.venue": "Mekân", "nav.pdf": "Bildiri Kitabı (PDF)", "nav.home": "Ana Sayfa",
 
     "bm.date": "29 – 30 EYLÜL 2026 | İZMİR, TÜRKİYE",
+    "spot.bridge": "15 Temmuz Şehitler (Boğaziçi) Köprüsü — Avrupa ile Asya'yı birleştirir",
+    "spot.fuji": "Fuji Dağı — Japonya'nın simgesi: aktif bir volkan ve zengin bir kaynak suyu kaynağı olarak seminerin afet ve su altyapısı temalarını simgeler",
     "cover.jsps": "JSPS&nbsp; JAPONYA – TÜRKİYE<br>İKİLİ&nbsp; SEMİNERİ",
     "cover.book": "BİLDİRİ &nbsp;&amp;&nbsp; PROGRAM &nbsp;KİTABI",
     "cover.themeL": "TEMA",

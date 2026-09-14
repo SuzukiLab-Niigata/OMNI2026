@@ -99,6 +99,21 @@ html[lang="ja"] .bm-date{font-family:var(--logo-font),"Hiragino Sans","Noto Sans
 .logo-svg{max-width:640px;margin:12px auto 0}
 .logo-svg svg,.logo-svg img{display:block;width:100%;height:auto}
 .cover-sky{display:block;width:100%;max-width:640px;height:auto;margin:2px auto 22px}
+/* skyline hotspots: Bosphorus Bridge (left) and Mount Fuji (right) */
+.sky{position:relative;max-width:640px;margin:2px auto 22px}
+.sky .cover-sky{margin:0;max-width:none}
+.spot{position:absolute;top:4%;height:92%;border-radius:10px;outline:2px dashed transparent;outline-offset:-2px;transition:background-color .2s,outline-color .2s}
+.spot-bridge{left:1%;width:54%}
+.spot-fuji{left:57%;width:42%}
+.spot:hover,.spot:focus-visible,.spot.show{background:rgba(22,41,90,.06);outline-color:rgba(22,41,90,.35)}
+.tip{position:absolute;bottom:calc(100% + 10px);width:max-content;max-width:min(320px,82vw);background:#16295a;color:#fff;font:700 .86rem/1.45 var(--logo-font),"Hiragino Sans","Noto Sans JP",sans-serif;padding:9px 13px;border-radius:6px;text-align:left;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s,transform .15s,visibility .15s;pointer-events:none;z-index:5;box-shadow:0 6px 18px rgba(0,0,0,.22)}
+.tip small{display:block;font-weight:400;opacity:.8;margin-top:3px}
+.tip::after{content:"";position:absolute;top:100%;border:7px solid transparent;border-top-color:#16295a}
+.spot-bridge .tip{left:8%}
+.spot-bridge .tip::after{left:22px}
+.spot-fuji .tip{right:6%}
+.spot-fuji .tip::after{right:22px}
+.spot:hover .tip,.spot:focus-visible .tip,.spot.show .tip{opacity:1;visibility:visible;transform:none}
 .unis-svg{max-width:470px;margin:12px auto 14px}
 .unis-svg svg,.unis-svg img{display:block;width:100%;height:auto}
 /* organizer logos with live names */

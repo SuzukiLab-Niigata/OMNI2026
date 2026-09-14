@@ -85,6 +85,20 @@
     }).catch(function () {});
   });
 
+  /* Skyline hotspots: hover shows the note on desktop; on touch screens the first tap shows it, the second opens the link */
+  var spots = [].slice.call(document.querySelectorAll('.spot'));
+  spots.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      if (window.matchMedia('(hover: none)').matches && !a.classList.contains('show')) {
+        e.preventDefault();
+        spots.forEach(function (x) { x.classList.toggle('show', x === a); });
+      }
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest || !e.target.closest('.spot')) spots.forEach(function (x) { x.classList.remove('show'); });
+  });
+
   /* 3D models: download only when the viewer taps the button (the file is large) */
   [].forEach.call(document.querySelectorAll('model-viewer[data-src]'), function (mv) {
     var btn = mv.querySelector('.mv-load'), bar = mv.querySelector('.mv-progress span');
