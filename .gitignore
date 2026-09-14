@@ -1,3 +1,5 @@
 *.docx
 .DS_Store
 ~$*
+# raw 3D scans (too large for GitHub); the web-optimized copy lives in assets/3d/
+assets/img/*.glb

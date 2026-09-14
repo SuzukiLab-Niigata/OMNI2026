@@ -191,6 +191,16 @@ figcaption{font-style:italic;color:var(--gold-ink);font-size:.86rem;text-align:c
 .two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .num{font-size:2.2rem;font-weight:700;color:var(--gold);line-height:1}
 .chal h3{color:var(--teal);font-size:1.12rem;margin:4px 0 6px}
+/* 3D model viewer */
+.model3d{margin:22px 0 8px}
+.model3d model-viewer{display:block;position:relative;width:100%;height:clamp(320px,62vw,560px);background:radial-gradient(ellipse at 50% 40%,#fbfbf8 0%,#e3e8e5 100%);border:1px solid var(--rule);--poster-color:transparent}
+.mv-poster{position:absolute;inset:0;background:#dfe5e2 url(img/tour-59.jpg) center/cover no-repeat}
+.mv-load{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--teal);color:#fff;border:0;border-radius:4px;padding:12px 22px;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.28);white-space:nowrap}
+.mv-load:hover{background:var(--teal-2)}
+.mv-load[disabled]{opacity:.8;cursor:progress}
+.mv-load small{display:block;font-weight:400;font-size:.78rem;opacity:.85;margin-top:2px}
+.mv-progress{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(0,0,0,.08)}
+.mv-progress span{display:block;height:100%;width:0;background:var(--gold);transition:width .2s}
 .kv{width:100%;border-collapse:collapse;font-size:.95rem}
 .kv th{width:170px;text-align:left;vertical-align:top;color:#fff;background:var(--teal);padding:7px 10px;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid #fff}
 .kv td{padding:7px 12px;background:var(--row);border-bottom:1px solid #fff}

@@ -136,6 +136,8 @@
     "hy.2p1": "Tahtalı ダムでのテクニカルツアーは360°カメラと音声レコーダーで記録し、後日処理します。",
     "hy.2p2": "アーカイブには、点検した対象の形状と、それについて語られた音声記録の2つが同時に保存されます。各発言は発せられた位置に紐づけられているため、アーカイブは視聴するだけでなく「歩き回る」ことができます。現地に来られなかった方も、現地で見た細部を振り返りたい方も、同じ議論の同じ場所にたどり着けます。",
     "hy.cap": "解説を紐づけた調査地点の3次元記録",
+    "hy.3dload": "▶ 3Dモデルを表示",
+    "hy.3dcap": "Tahtalı ダム取水塔の3次元モデル — ドラッグで回転、スクロール／ピンチで拡大縮小",
 
     "si.title": "連携特集号 — Buildings（MDPI）",
     "si.p": "OMNI 2026で発表された研究は、Buildings（MDPI）の連携特集号への投稿を歓迎します。セミナーへの投稿は要旨のみで、特集号へのフルペーパー投稿は任意です。論文掲載料（APC）の割引を申請でき（招待講演者50%、一般参加者20%）、投稿前に編集部が確認します。査読済み論文が8編以上掲載された場合、ISBN付きの特集号リプリントとして刊行されます。",
@@ -318,6 +320,8 @@
     "hy.2p1": "Tahtalı Barajı'ndaki teknik gezi 360° kameralar ve ses kayıt cihazlarıyla kaydedilir ve ardından işlenir.",
     "hy.2p2": "Böylece arşiv iki şeyi bir arada barındırır: incelenen yapının geometrisi ve onun hakkında söylenenlerin sesli kaydı. Her yorum yapıldığı konuma bağlandığından arşiv yalnızca izlenmez, içinde dolaşılabilir — seyahat edemeyen meslektaşlar da gezide bulunup bir ayrıntıya geri dönmek isteyenler de aynı tartışmanın aynı noktasına ulaşır.",
     "hy.cap": "Konuma bağlı yorumlarla inceleme sahasının üç boyutlu kaydı",
+    "hy.3dload": "▶ 3B modeli görüntüle",
+    "hy.3dcap": "Tahtalı Barajı su alma kulesinin 3B modeli — döndürmek için sürükleyin, yakınlaştırmak için kaydırın veya iki parmakla sıkıştırın",
 
     "si.title": "Bağlantılı Özel Sayı — Buildings (MDPI)",
     "si.p": "OMNI 2026'da sunulan çalışmalar Buildings (MDPI) dergisinin bağlantılı Özel Sayısı'na davet edilmektedir. Seminere yalnızca özet gönderilir; Özel Sayı'ya tam makale gönderimi isteğe bağlıdır. Talep üzerine Makale İşlem Ücreti (APC) indirimi uygulanır — davetli konuşmacılar için %50, genel katılımcılar için %20 — ve gönderimden önce Yayın Ofisi tarafından onaylanır. Hakemli sekiz veya daha fazla makale yayımlanırsa koleksiyon, ISBN'li bir Özel Sayı Baskısı olarak yayımlanır.",

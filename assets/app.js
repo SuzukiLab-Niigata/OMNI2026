@@ -68,6 +68,14 @@
     });
   }
 
+  /* 3D models: download only when the viewer taps the button (the file is large) */
+  [].forEach.call(document.querySelectorAll('model-viewer[data-src]'), function (mv) {
+    var btn = mv.querySelector('.mv-load'), bar = mv.querySelector('.mv-progress span');
+    if (btn) btn.addEventListener('click', function () { btn.disabled = true; mv.setAttribute('src', mv.getAttribute('data-src')); });
+    mv.addEventListener('progress', function (e) { if (bar) bar.style.width = Math.round(e.detail.totalProgress * 100) + '%'; });
+    mv.addEventListener('load', function () { var p = mv.querySelector('.mv-progress'); if (p) p.hidden = true; });
+  });
+
   /* Proceedings PDF: the file always lives at a fixed path.
      If it exists, "ready" elements are shown; otherwise "soon" elements stay visible. */
   var pdf = document.body.getAttribute('data-pdf');
