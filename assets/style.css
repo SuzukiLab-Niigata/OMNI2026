@@ -77,7 +77,7 @@ h1,h2,h3,h4{margin:0;line-height:1.25}
 html[lang="ja"] .stats span{letter-spacing:.02em}
 
 /* scalable logo: emblem (SVG) + live text, sized to its own width */
-:root{--logo-font:"Helvetica World","Helvetica Neue",Helvetica,Arial,sans-serif}
+:root{--logo-font:Arimo,"Helvetica Neue",Helvetica,Arial,sans-serif}
 .brandmark{container-type:inline-size;max-width:640px;margin:10px auto 22px;color:#16295a;font-family:var(--logo-font);text-align:center;line-height:1}
 .bm-word{display:flex;align-items:center;justify-content:center;max-width:100%}
 .bm-o{width:20cqi;height:auto;flex:none;margin-right:1cqi}
