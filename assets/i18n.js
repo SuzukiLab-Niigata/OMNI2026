@@ -5,11 +5,23 @@
     "_title": "OMNI 2026 — JSPS 日本–トルコ二国間セミナー · イズミル 2026年9月29日–30日",
     "_ptitle": "論文集 & プログラム — OMNI 2026",
     "head.sub": "JSPS 日本–トルコ二国間セミナー · トルコ・イズミル",
+    "nav.search": "著者検索",
+    "sr.title": "著者検索",
+    "sr.lead": "発表者・共著者の名前、発表タイトル、所属、発表番号で検索できます。",
+    "sr.ph": "例：Suzuki、Alver、acoustic emission",
+    "sr.note": "現在の論文集（ドラフト）に基づくデータです。著者情報は今後更新されます。",
+    "sr.all": "全著者 — 名前をクリックすると検索します",
+    "sr.count": "{n}件の発表が見つかりました",
+    "sr.none": "該当する発表はありません",
+    "sr.view": "プログラムで見る →",
+    "sr.presenter": "発表者",
+    "sr.kn": "基調講演", "sr.sa": "セッション A", "sr.sb": "セッション B", "sr.sc": "ショートコミュニケーション",
     "nav.welcome": "ご挨拶", "nav.dates": "重要日程", "nav.about": "概要", "nav.programme": "プログラム",
     "nav.sessions": "セッション", "nav.keynotes": "基調講演", "nav.tour": "テクニカルツアー", "nav.si": "特集号",
     "nav.org": "組織・メンバー", "nav.venue": "会場", "nav.pdf": "論文集 (PDF)", "nav.home": "ホーム",
 
     "bm.date": "2026年9月29日–30日 | トルコ・イズミル",
+    "sky.hint": "橋や富士山にカーソルを合わせる（スマホはタップする）と説明が表示されます",
     "spot.bridge": "ボスポラス橋 — ヨーロッパとアジアを繋ぐ",
     "spot.fuji": "富士山 — 日本の象徴。活火山であり豊かな湧水の源として、本セミナーのテーマ「災害」と「水インフラ」を象徴します",
     "cover.jsps": "JSPS 日本 – トルコ<br>二国間セミナー",
@@ -40,7 +52,7 @@
     "welcome.p2": "第1回 土木・産業インフラの最適管理と非破壊検査に関する国際セミナー（OMNI 2026）は、土木工学と農業工学の研究者が一堂に会し、水インフラならびに都市・産業インフラを対象に、維持管理の高度化、地震防災・減災、震災後の迅速な復旧について議論する場です。本取り組みは、2014年から続くエーゲ大学工学部（トルコ共和国）と新潟大学農学部（日本）の二国間国際共同研究を基盤としています。両国間の研究交流を通じて、私たちは若手研究者の積極的な育成に特に力を注いできました。その大きな動機は、トルコと日本がともに極めて甚大な震災を経験してきたことにあります。",
     "welcome.p3": "トルコでは、2023年2月のトルコ・シリア地震により2,000万人以上が被災し、約21万棟の建物が被害を受けました。日本でも、近年に限っても、阪神・淡路大震災（1995年）、新潟県中越地震（2004年）、東日本大震災（2011年）、熊本地震（2016年）、能登半島地震（2024年）など数多くの震災が記録されています。防災・減災の観点から、両国の農学・工学の研究者による先進的な非破壊検査技術の開発と提案は、都市インフラのみならず食料生産を含む私たちの生存基盤そのものを脅かす、将来想定される複合災害への包括的な備えとなります。こうした技術的な取り組みに加え、2026年4月にはProf. Dr. Yalçın Alverの主導により、イズミル市と新潟市の行政・学術交流が予定されています。技術開発だけでなく、こうした行政との連携を通じて、災害から生活・生産環境を守るための実践的な方策を模索しています。",
     "welcome.p4": "OMNI 2026が、国境を越えた研究開発と産学官連携に貢献することを心より願っております。本セミナーには、トルコ共和国から10名、日本から11名、計21名の発表者が参加し、そのうち10名が学生・若手研究者です。本セミナーに参加する若い皆さんが、今後トルコと日本の架け橋として成長されることを期待しています。",
-    "welcome.p5": "最後に、本セミナーは日本学術振興会（JSPS）–TÜBİTAK 二国間交流事業 共同研究（JPJSBP220269903）の支援を受けて開催されます。トルコ側の受入機関であり共同実施者であるエーゲ大学工学部の Prof. Dr. Yalçın Alver および Prof. Dr. Ninel Alver の多大なるご協力に深く感謝申し上げます。また、日本側から参加いただいた Dr. Toru Nakada（農研機構 農村工学研究部門 上級研究員）、Kentaro Ohno 准教授（東京都立大学）、Yohei Asada 准教授（東京農工大学）、So Fujiyama 准教授（三重大学）、Taiki Hagiwara 助教（山口大学）に、ご参加とセミナー運営へのご協力に対し感謝いたします。",
+    "welcome.p5": "最後に、本セミナーは日本学術振興会（JSPS）–TÜBİTAK 二国間交流事業 共同研究（JPJSBP220269903）の支援を受けて開催されます。トルコ側の受入機関であり共同実施者であるエーゲ大学工学部の Prof. Dr. Yalçın Alver および Prof. Dr. Ninel Alver の多大なるご協力に深く感謝申し上げます。また、日本側から参加いただいた中田 達 上級研究員（農研機構 農村工学研究部門）、大野 健太郎 准教授（東京都立大学）、浅田 洋平 准教授（東京農工大学）、藤山 宗 准教授（三重大学）、萩原 大生 助教（山口大学）に、ご参加とセミナー運営へのご協力に対し感謝いたします。",
     "welcome.role": "OMNI 2026 議長",
     "welcome.aff": "新潟大学 農学系（日本）",
     "welcome.date": "2026年9月",
@@ -192,11 +204,23 @@
     "_title": "OMNI 2026 — JSPS Japonya–Türkiye İkili Semineri · İzmir, 29–30 Eylül 2026",
     "_ptitle": "Bildiri & Program Kitabı — OMNI 2026",
     "head.sub": "JSPS Japonya – Türkiye İkili Semineri · İzmir, Türkiye",
+    "nav.search": "Yazar Arama",
+    "sr.title": "Yazar Arama",
+    "sr.lead": "Sunumcu ve ortak yazarları ada göre ya da sunum başlığı, kurum veya sunum numarasına göre arayın.",
+    "sr.ph": "örn. Suzuki, Alver, acoustic emission",
+    "sr.note": "Veriler mevcut bildiri kitabı taslağına dayanmaktadır; yazar listesi güncellenecektir.",
+    "sr.all": "Tüm yazarlar — aramak için bir isme tıklayın",
+    "sr.count": "{n} sunum bulundu",
+    "sr.none": "Eşleşen sunum bulunamadı",
+    "sr.view": "Programda görüntüle →",
+    "sr.presenter": "sunumcu",
+    "sr.kn": "Davetli Konuşma", "sr.sa": "Oturum A", "sr.sb": "Oturum B", "sr.sc": "Kısa Bildiri",
     "nav.welcome": "Hoş Geldiniz", "nav.dates": "Tarihler", "nav.about": "Hakkında", "nav.programme": "Program",
     "nav.sessions": "Oturumlar", "nav.keynotes": "Davetli Konuşmalar", "nav.tour": "Teknik Gezi", "nav.si": "Özel Sayı",
     "nav.org": "Kurullar", "nav.venue": "Mekân", "nav.pdf": "Bildiri Kitabı (PDF)", "nav.home": "Ana Sayfa",
 
     "bm.date": "29 – 30 EYLÜL 2026 | İZMİR, TÜRKİYE",
+    "sky.hint": "Ayrıntılar için köprünün veya Fuji Dağı'nın üzerine gelin (mobilde dokunun)",
     "spot.bridge": "15 Temmuz Şehitler (Boğaziçi) Köprüsü — Avrupa ile Asya'yı birleştirir",
     "spot.fuji": "Fuji Dağı — Japonya'nın simgesi: aktif bir volkan ve zengin bir kaynak suyu kaynağı olarak seminerin afet ve su altyapısı temalarını simgeler",
     "cover.jsps": "JSPS&nbsp; JAPONYA – TÜRKİYE<br>İKİLİ&nbsp; SEMİNERİ",
@@ -387,4 +411,13 @@
   [ja, tr].forEach(function (d) { for (var k in alias) d[k] = d[alias[k]]; });
 
   window.I18N = { ja: ja, tr: tr };
+  /* Japanese names shown when the page is in Japanese (romanized name → kanji) */
+  window.OMNI_NAMES_JA = {
+    "Tetsuya Suzuki": "鈴木 哲也",
+    "Toru Nakada": "中田 達",
+    "Kentaro Ohno": "大野 健太郎",
+    "Yohei Asada": "浅田 洋平",
+    "So Fujiyama": "藤山 宗",
+    "Taiki Hagiwara": "萩原 大生"
+  };
 })();

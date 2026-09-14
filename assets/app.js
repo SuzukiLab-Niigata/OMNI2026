@@ -14,6 +14,37 @@
     document.head.appendChild(l);
   }
 
+  /* In Japanese, show the Japanese members' names in kanji everywhere on the page
+     (e.g. "Prof. Dr. Tetsuya Suzuki" → "鈴木 哲也 教授"). Names come from window.OMNI_NAMES_JA in i18n.js. */
+  var textOriginal = new WeakMap();
+  function applyNames(lang) {
+    var map = window.OMNI_NAMES_JA || {};
+    var keys = Object.keys(map);
+    if (!keys.length) return;
+    var re = new RegExp('((?:Assist\\.|Assoc\\.)\\s+Prof\\.\\s+(?:Dr\\.\\s+)?|Prof\\.\\s+(?:Dr\\.\\s+)?|Dr\\.\\s+)?(' +
+      keys.map(function (k) { return k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }).join('|') + ')', 'g');
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        return n.parentNode && n.parentNode.closest('script,style,svg,model-viewer,.sr-list,.sr-chips')
+          ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var todo = [], node;
+    while ((node = walker.nextNode())) todo.push(node);
+    todo.forEach(function (n) {
+      var orig = textOriginal.has(n) ? textOriginal.get(n) : n.nodeValue;
+      if (lang === 'ja') {
+        var v = orig.replace(re, function (m, title, name) {
+          var suffix = !title ? '' : /Assist/.test(title) ? ' 助教' : /Assoc/.test(title) ? ' 准教授' : /Prof/.test(title) ? ' 教授' : '';
+          return map[name] + suffix;
+        });
+        if (v !== orig) { textOriginal.set(n, orig); n.nodeValue = v; }
+      } else if (textOriginal.has(n)) {
+        n.nodeValue = textOriginal.get(n);
+      }
+    });
+  }
+
   function setLang(lang, save) {
     if (LANGS.indexOf(lang) < 0) lang = 'en';
     var dict = (window.I18N && window.I18N[lang]) || {};
@@ -21,6 +52,14 @@
       var k = n.getAttribute('data-i18n');
       n.innerHTML = (lang !== 'en' && dict[k] != null) ? dict[k] : original.get(n);
     });
+    [].forEach.call(document.querySelectorAll('[data-i18n-ph]'), function (n) {
+      if (!n.hasAttribute('data-ph-en')) n.setAttribute('data-ph-en', n.placeholder);
+      var k = n.getAttribute('data-i18n-ph');
+      n.placeholder = (lang !== 'en' && dict[k] != null) ? dict[k] : n.getAttribute('data-ph-en');
+    });
+    document.documentElement.lang = lang;
+    document.dispatchEvent(new CustomEvent('omni:lang', { detail: lang }));
+    applyNames(lang);
     document.documentElement.lang = lang;
     var tkey = document.body.getAttribute('data-title');
     document.title = (lang !== 'en' && tkey && dict[tkey]) ? dict[tkey] : baseTitle;
@@ -98,6 +137,24 @@
   document.addEventListener('click', function (e) {
     if (!e.target.closest || !e.target.closest('.spot')) spots.forEach(function (x) { x.classList.remove('show'); });
   });
+  if (window.matchMedia('(hover: hover)').matches) {
+    spots.forEach(function (a) {
+      var tip = a.querySelector('.tip');
+      a.addEventListener('mousemove', function (e) {
+        var r = a.getBoundingClientRect(), tw = tip.offsetWidth, th = tip.offsetHeight;
+        var x = e.clientX - r.left, y = e.clientY - r.top;
+        var cx = Math.max(tw / 2 + 6 - r.left, Math.min(window.innerWidth - r.left - tw / 2 - 6, x));
+        tip.style.left = cx + 'px';
+        tip.style.top = (y - th - 18) + 'px';
+        tip.style.setProperty('--ax', (tw / 2 + (x - cx)) + 'px');
+        a.classList.add('follow');
+      });
+      a.addEventListener('mouseleave', function () {
+        a.classList.remove('follow');
+        tip.style.left = tip.style.top = '';
+      });
+    });
+  }
 
   /* 3D models: download only when the viewer taps the button (the file is large) */
   [].forEach.call(document.querySelectorAll('model-viewer[data-src]'), function (mv) {
