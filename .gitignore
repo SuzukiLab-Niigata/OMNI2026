@@ -1,0 +1,7 @@
+*.docx
+.DS_Store
+~$*
+# raw 3D scans (too large for GitHub); the web-optimized copy lives in assets/3d/
+assets/img/*.glb
+# plaintext originals of the password-protected content — never published; tools/encrypt.py reads these
+private/

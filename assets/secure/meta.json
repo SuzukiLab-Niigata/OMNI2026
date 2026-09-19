@@ -1,0 +1,7 @@
+{
+ "v": 1,
+ "kdf": "PBKDF2-SHA256",
+ "iter": 600000,
+ "salt": "up0nW51A9wHPYnoyGTrFDw==",
+ "check": "0uegnTAMjNS7zp7LnGnKvctKatxajXRTwdR1K5OHZuMQqM258Dto"
+}
