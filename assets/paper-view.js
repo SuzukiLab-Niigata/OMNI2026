@@ -40,16 +40,22 @@
   function groupLabel(p) { return { keynote: t('ar.gk'), A: t('ar.gA'), B: t('ar.gB'), S: t('ar.gS') }[p.group]; }
   function unlocked() { return !S || S.isUnlocked(); }
 
+  /* text the PDF could not hand over as characters is marked ⟦EQ⟧ and shown as a pointer to the printed page */
+  var MARK = '\u27e6EQ\u27e7';
+  function withMarks(text) {
+    return esc(text).split(MARK).join('<a class="pv-eqmiss" href="#printed">' + t('pv.eqmiss') + '</a>');
+  }
   function sectionHtml(s) {
     var out = '<h3 class="pv-sec">' + esc(s.n) + '. ' + esc(s.h) + '</h3>';
     if (s.blocks && s.blocks.length) {
       s.blocks.forEach(function (b) {
-        if (b.t === 'eq') out += '<span class="pv-eq">' + esc(b.text) + '<a class="pv-eqlink" href="#printed">' + t('pv.seepage') + '</a></span>';
-        else if (b.t === 'cap') out += '<p class="pv-cap">' + esc(b.text) + '</p>';
-        else out += '<p>' + esc(b.text) + '</p>';
+        if (b.t === 'eqmiss') out += '<span class="pv-eq pv-eqbox"><a class="pv-eqmiss" href="#printed">' + t('pv.eqmiss') + '</a></span>';
+        else if (b.t === 'eq') out += '<span class="pv-eq">' + esc(b.text) + '<a class="pv-eqlink" href="#printed">' + t('pv.seepage') + '</a></span>';
+        else if (b.t === 'cap') out += '<p class="pv-cap">' + withMarks(b.text) + '</p>';
+        else out += '<p>' + withMarks(b.text) + '</p>';
       });
     } else if (s.text) {
-      out += '<p>' + esc(s.text) + '</p>';
+      out += '<p>' + withMarks(s.text) + '</p>';
     }
     return out;
   }
@@ -100,14 +106,14 @@
     var html = header(body.title || paper.title);
     if (wantPdf) html += '<section class="pv-pdfview"><iframe title="PDF" class="viewer"></iframe></section>';
     html += '<p class="pv-note">' + (partial ? t('pv.partial') : translated ? t('pv.machine') : (L === 'en' ? '' : t('pv.missing'))) + '</p>';
-    if (body.abstract) html += '<h2 class="sub">' + t('pv.abstract') + '</h2><p>' + esc(body.abstract) + '</p>';
+    if (body.abstract) html += '<h2 class="sub">' + t('pv.abstract') + '</h2><p>' + withMarks(body.abstract) + '</p>';
     if (body.keywords) html += '<p class="pv-kw"><b>' + t('pv.keywords') + ':</b> ' + esc(body.keywords) + '</p>';
     if (hasEq) html += '<p class="pv-note">' + t('pv.eqnote') + '</p>';
     (body.sections || []).forEach(function (s) { html += sectionHtml(s); });
-    if (body.ack) html += '<h2 class="sub">' + t('pv.ack') + '</h2><p>' + esc(body.ack) + '</p>';
+    if (body.ack) html += '<h2 class="sub">' + t('pv.ack') + '</h2><p>' + withMarks(body.ack) + '</p>';
     if (body.refs && body.refs.length) {
       html += '<h2 class="sub">' + t('pv.refs') + '</h2><ol class="pv-refs">' +
-        body.refs.map(function (r) { return '<li>' + esc(r) + '</li>'; }).join('') + '</ol>';
+        body.refs.map(function (r) { return '<li>' + withMarks(r) + '</li>'; }).join('') + '</ol>';
     }
     var n = data.en.imgs || 0;
     if (n) {
