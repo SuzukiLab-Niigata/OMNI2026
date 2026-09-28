@@ -1,5 +1,5 @@
 /* OMNI 2026 — presentations and authors for the Author Search and the paper archive.
-   Source: Proceedings ver5, updated 27 September 2026 (OMNI2026_Proceedings_ver5.pdf, 80 pages). Update this list when the proceedings change.
+   Source: Proceedings ver5, updated 29 September 2026 (OMNI2026_Proceedings_ver5.pdf, 80 pages). Update this list when the proceedings change.
    group: "keynote" | "A" | "B" | "S"     anchor: id of the entry in the programme
    pdf: per-paper PDF under proceedings/papers/     pages: page range inside the full book */
 window.OMNI_PAPERS = [
@@ -155,7 +155,7 @@ window.OMNI_PAPERS = [
       { name: "Tetsuya Suzuki", ja: "鈴木 哲也", aff: "Institute of Agriculture, Niigata University, Niigata, Japan" }
     ] },
   { id: "S-6", code: "S-6", group: "S", anchor: "p-S-6", pdf: "S-6.pdf", pages: [71, 74],
-    title: "Analysis of Accident Experiences, Causes and Types in Shared E-scooter Use: A Case Study in İzmir",
+    title: "An Analysis of Accidents in Shared E-Scooter Use",
     authors: [
       { name: "İlknur Türker", aff: "Department of Civil Engineering, Faculty of Engineering, Ege University, İzmir, Türkiye", presenter: true },
       { name: "Yalçın Alver", aff: "Department of Civil Engineering, Faculty of Engineering, Ege University, İzmir, Türkiye" }

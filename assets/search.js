@@ -35,7 +35,7 @@
   function shown(a) { return lang() === 'ja' && a.ja ? a.ja : a.name; }
   function nameKeys(a) { return norm(a.name) + ' ' + (a.ja ? a.ja + ' ' + a.ja.replace(/\s+/g, '') : ''); }
   function groupLabel(p) {
-    return { keynote: t('sr.kn'), A: t('sr.sa'), B: t('sr.sb'), SC: t('sr.sc') }[p.group];
+    return { keynote: t('sr.kn'), A: t('sr.sa'), B: t('sr.sb'), S: t('sr.sc') }[p.group];
   }
 
   papers.forEach(function (p) {
