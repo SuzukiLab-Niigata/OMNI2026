@@ -32,7 +32,7 @@ h1,h2,h3,h4{margin:0;line-height:1.25}
 .runhead .brand img{width:34px;height:34px}
 .runhead .brand small{font-weight:400;letter-spacing:0;color:var(--muted);margin-left:4px;font-size:.88rem}
 .menu{display:flex;list-style:none;margin:0 0 0 auto;padding:0;gap:0}
-.menu a{display:block;padding:6px 8px;color:var(--teal);text-decoration:none;font-size:.9rem;border-radius:4px;white-space:nowrap}
+.menu a{display:block;padding:6px 6px;color:var(--teal);text-decoration:none;font-size:.9rem;border-radius:4px;white-space:nowrap}
 .menu a:hover{background:var(--row)}
 .menu a.pdf{background:var(--teal);color:#fff;margin-left:6px}
 .menu a.pdf:hover{background:var(--teal-2)}
@@ -259,6 +259,15 @@ figcaption{font-style:italic;color:var(--gold-ink);font-size:.86rem;text-align:c
 .ar-id{font-weight:700;color:var(--gold-ink);font-variant-numeric:tabular-nums;font-size:.9rem}
 .ar-links{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .btn.small{padding:5px 12px;font-size:.85rem;margin:0}
+
+/* ---------- live translation ---------- */
+.live-box{border-left-color:var(--teal-2)}
+.live-box h3{display:flex;align-items:center;gap:9px}
+.live-box .note{margin:10px 0 0;text-align:left}
+.live-dot{width:10px;height:10px;flex:none;border-radius:50%;background:#c0392b;box-shadow:0 0 0 0 rgba(192,57,43,.55);animation:livePulse 1.9s ease-out infinite}
+@keyframes livePulse{70%{box-shadow:0 0 0 9px rgba(192,57,43,0)}100%{box-shadow:0 0 0 0 rgba(192,57,43,0)}}
+.menu a.live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#c0392b;margin-right:6px;vertical-align:1px}
+@media (prefers-reduced-motion:reduce){.live-dot{animation:none}}
 .btn.small small{font-weight:400;opacity:.8}
 .ar-prog{font-size:.85rem;font-weight:700;color:var(--teal)}
 @media (max-width:640px){.ar-item{grid-template-columns:1fr;gap:4px}}
@@ -296,8 +305,13 @@ figcaption{font-style:italic;color:var(--gold-ink);font-size:.86rem;text-align:c
 .pv-loading{color:var(--muted);font-style:italic}
 
 /* live "Now!!" bar during the seminar */
-.now-bar{position:sticky;top:56px;z-index:40;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;background:var(--teal);color:#fff;text-decoration:none;padding:8px 20px;border-bottom:2px solid var(--gold);font-size:.95rem}
-.now-bar:hover{background:var(--teal-2)}
+.now-bar{position:sticky;top:56px;z-index:40;display:flex;align-items:stretch;background:var(--teal);color:#fff;padding:0;border-bottom:2px solid var(--gold);font-size:.95rem}
+.now-main{flex:1 1 auto;min-width:0;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;color:#fff;text-decoration:none;padding:8px 14px 8px 20px}
+.now-main:hover{background:var(--teal-2);color:#fff}
+.now-live{flex:none;display:flex;align-items:center;gap:8px;background:#fff;color:var(--teal);text-decoration:none;font-weight:700;font-size:.85rem;white-space:nowrap;padding:0 18px;border-left:2px solid var(--gold)}
+.now-live:hover{background:var(--row)}
+.now-live .narrow{display:none}
+.now-live::before{content:"";width:8px;height:8px;border-radius:50%;background:#c0392b;flex:none;box-shadow:0 0 0 0 rgba(192,57,43,.6);animation:livePulse 1.9s ease-out infinite}
 .now-tag{background:var(--gold);color:#1e1c10;font-weight:700;letter-spacing:.08em;padding:2px 10px;border-radius:99px;font-size:.8rem;white-space:nowrap;animation:nowpulse 2.4s ease-in-out infinite}
 .now-tag.soon{background:#fff;color:var(--teal);animation:none}
 .now-tag.done{background:rgba(255,255,255,.18);color:#fff;animation:none}
@@ -310,7 +324,11 @@ figcaption{font-style:italic;color:var(--gold-ink);font-size:.86rem;text-align:c
 .talk.is-now,.ktab.is-now{position:relative;background:#fbf3df;box-shadow:inset 3px 0 0 var(--gold)}
 .talk.is-now::after,.ktab.is-now::after{content:"NOW";position:absolute;right:8px;top:6px;background:var(--gold);color:#1e1c10;font:700 .68rem/1 Arimo,sans-serif;letter-spacing:.08em;padding:3px 7px;border-radius:99px}
 @media (max-width:640px){
-  .now-bar{font-size:.86rem;padding:7px 12px;gap:7px}
+  .now-bar{font-size:.86rem;padding:0}
+  .now-main{padding:7px 0 7px 12px;gap:7px}
+  .now-live{padding:0 12px;font-size:.8rem}
+  .now-live .wide{display:none}
+  .now-live .narrow{display:inline}
   .now-next{display:none}
 }
 

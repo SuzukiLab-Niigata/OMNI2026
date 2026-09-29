@@ -3,6 +3,7 @@
    Test any moment with ?now=2026-09-29T10:05 (İzmir local time). */
 (function () {
   var bar = document.getElementById('now-bar');
+  var main = document.getElementById('now-main') || bar;
   var slots = window.OMNI_SCHEDULE || [];
   if (!bar || !slots.length) return;
   var papers = {};
@@ -68,7 +69,7 @@
         (c.code ? '<b>' + c.code + '</b>' : '') +
         '<span class="now-time">' + current.s + '–' + current.e + '</span>' +
         '<span class="now-title">' + c.text + '</span>';
-      bar.setAttribute('href', '#' + (c.anchor || 'glance'));
+      main.setAttribute('href', '#' + (c.anchor || 'glance'));
       mark(c.anchor);
     } else if (next) {
       var n0 = label(next);
@@ -76,11 +77,11 @@
         (n0.code ? '<b>' + n0.code + '</b>' : '') +
         '<span class="now-time">' + next.s + '</span>' +
         '<span class="now-title">' + n0.text + '</span>';
-      bar.setAttribute('href', '#' + (n0.anchor || 'glance'));
+      main.setAttribute('href', '#' + (n0.anchor || 'glance'));
       unmark();
     } else {
       html = '<span class="now-tag done">' + t('now.ended') + '</span>';
-      bar.setAttribute('href', '#glance');
+      main.setAttribute('href', '#glance');
       unmark();
     }
     if (current && next) {
@@ -88,7 +89,7 @@
       var nName = n.code || (n.text.length > 28 ? n.text.slice(0, 28) + '…' : n.text);
       html += '<span class="now-next">' + t('now.next') + ': ' + next.s + ' ' + nName + '</span>';
     }
-    bar.innerHTML = html;
+    main.innerHTML = html;
     bar.hidden = false;
   }
   function mark(anchor) {
