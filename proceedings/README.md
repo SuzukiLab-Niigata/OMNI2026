@@ -14,6 +14,7 @@ titles, the poster and everything else stay public.
 | `private/pages/<id>-<n>.jpg` | `assets/pages/<id>-<n>.jpg.enc` |
 | `private/papers-html/<id>.json` | `assets/papers-html/<id>.json.enc` |
 | `private/secure-main.json` (keynote abstracts, EN/JA/TR) | `assets/secure/main.json.enc` |
+| `private/certificates/<code>.pdf` (certificates of presentation, oral talks only) | `certificates/<code>.pdf.enc` |
 
 `assets/secure/meta.json` holds the salt, the iteration count and a check value — no secret.
 
@@ -30,6 +31,14 @@ titles, the poster and everything else stay public.
    ```
 
 The URLs and the QR codes never change.
+
+## Certificates of presentation
+
+`certificates/` lets each oral presenter (keynotes, Sessions A and B) enter the password, pick their
+presentation and save their certificate. The originals arrive as `12_Certificate/<name>.pdf` (not committed);
+copy each to `private/certificates/<code>.pdf` (`KA`, `KB`, `A-1` … `B-7`, the code printed on the
+certificate) and run `node tools/encrypt.mjs`. Each download emails the organizer through a Google Apps
+Script web app: see `tools/notify-apps-script.gs`, and set its URL in `NOTIFY_URL` in `assets/certificates.js`.
 
 ## Changing the password
 

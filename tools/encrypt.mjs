@@ -10,6 +10,7 @@
      private/pages/<id>-<n>.jpg                   -> assets/pages/<id>-<n>.jpg.enc
      private/papers-html/<id>.json                -> assets/papers-html/<id>.json.enc
      private/secure-main.json                     -> assets/secure/main.json.enc
+     private/certificates/<code>.pdf              -> certificates/<code>.pdf.enc
 
    Format (Web Crypto compatible): key = PBKDF2-SHA256(password, salt, ITER) -> AES-256-GCM;
    each file = 12-byte IV || ciphertext || 16-byte tag. Salt, iterations and a check value go in
@@ -34,6 +35,7 @@ const JOBS = [
   ['private/pages', /\.jpg$/, 'assets/pages'],
   ['private/papers-html', /\.json$/, 'assets/papers-html'],
   ['private', /^secure-main\.json$/, 'assets/secure', 'main.json'],
+  ['private/certificates', /\.pdf$/, 'certificates'],
 ];
 
 function askHidden(prompt) {

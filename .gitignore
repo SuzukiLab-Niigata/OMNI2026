@@ -7,3 +7,5 @@ assets/img/*.glb
 private/
 # the plaintext proceedings dropped into proceedings/ — copied into private/ and published only encrypted
 proceedings/OMNI2026_Proceedings_ver*.pdf
+# certificates of presentation (plaintext; private/certificates/ holds the copies tools/encrypt.mjs reads)
+12_Certificate/

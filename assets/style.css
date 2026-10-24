@@ -450,3 +450,17 @@ footer{max-width:var(--page);margin:0 auto 40px;padding-inline:20px;text-align:c
   .kv th,.kv td{display:block;width:auto}
   .viewer{display:none}
 }
+/* certificates of presentation */
+.cert-steps{list-style:none;padding:0;margin:18px 0 10px;display:grid;gap:14px}
+.cert-steps li{border:1px solid var(--rule);border-left:6px solid var(--gold);background:var(--row-2);padding:14px 18px;text-align:left}
+.cert-steps h3{color:var(--teal);font-size:1.08rem;margin:0 0 8px;display:flex;align-items:center;gap:10px}
+.cert-steps h3 span{display:inline-flex;align-items:center;justify-content:center;width:1.7em;height:1.7em;border-radius:50%;background:var(--teal);color:#fff;font-size:.9rem;flex:none}
+.cert-steps .sec-lock{margin:0}
+.cert-ok{color:var(--teal-2);font-weight:700;margin:0}
+.cert-steps select{display:block;width:100%;max-width:560px;font:inherit;font-size:1rem;padding:9px 10px;border:2px solid var(--teal);border-radius:6px;background:#fff;color:inherit}
+.cert-steps select:disabled{opacity:.5;border-color:var(--rule)}
+.cert-who{font-style:italic;color:var(--muted);margin:0 0 8px;text-align:left}
+.cert-who:empty{display:none}
+button.btn{font:inherit;font-weight:700;letter-spacing:.04em;border:0;cursor:pointer}
+.btn:disabled{opacity:.45;cursor:default}
+.btn:disabled:hover{background:var(--teal)}
